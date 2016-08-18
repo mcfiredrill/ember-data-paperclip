@@ -45,6 +45,10 @@ export default Transform.extend({
    * @public
    */
   serialize: function(deserialized) {
-    return deserialized.serialize();
+    if(!deserialized){
+      return null;
+    }else{
+      return deserialized.serialize();
+    }
   }
 });
